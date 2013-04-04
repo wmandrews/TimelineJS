@@ -7176,7 +7176,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 			}
 			
 			if (type.of(config.source) == "string" || type.of(config.source) == "object") {
-				VMM.Timeline.DataObj.getData(config.source);
+				VMM.Timeline.DataObj.getData(config.source, config.cached);
 			} else {
 				VMM.fireEvent(global, config.events.messege, "No data source provided");
 				//VMM.Timeline.DataObj.getData(VMM.getElement(timeline_id));
@@ -9108,7 +9108,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 	VMM.Timeline.DataObj = {
 		data_obj: {},
 		model_array: [],
-		getData: function (raw_data) {
+		getData: function (raw_data, cached) {
 			VMM.Timeline.DataObj.data_obj = {};
 			VMM.fireEvent(global, VMM.Timeline.Config.events.messege, VMM.Timeline.Config.language.messages.loading_timeline);
 			if (type.of(raw_data) == "object") {
@@ -9120,6 +9120,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					VMM.Timeline.DataObj.model.tweets.getData("%23medill");
 				} else if (	raw_data.match("spreadsheet") ) {
 					trace("DATA SOURCE: GOOGLE SPREADSHEET");
+					VMM.Timeline.DataObj.model.googlespreadsheet.cached = cached;
 					VMM.Timeline.DataObj.model.googlespreadsheet.getData(raw_data);
 				} else if (raw_data.match("storify.com")) {
 					trace("DATA SOURCE: STORIFY");
@@ -9274,6 +9275,8 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 			
 			googlespreadsheet: {
 				
+				cached: false,
+				
 				getData: function(raw) {
 					var getjsondata, key, worksheet, url, timeout, tries = 0;
 					
@@ -9281,7 +9284,8 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					worksheet = VMM.Util.getUrlVars(raw)["worksheet"];
 					if (typeof worksheet == "undefined") worksheet = "od6";
 					
-					url	= "https://spreadsheets.google.com/feeds/list/" + key + "/" + worksheet + "/public/values?alt=json";
+					url	= "https://spreadsheets.google.com/feeds/list/" + key + "/" + worksheet + "/public/values?alt=json-in-script";
+					if (!!this.cached) url = 'http://apps.washingtonpost.com/national/proxy/google/spreadsheet/' + key + '/' + worksheet + '/?alt=json-in-script';
 					
 					timeout = setTimeout(function() {
 						trace("Google Docs timeout " + url);
@@ -9297,9 +9301,15 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					}, 16000);
 					
 					function requestJsonData() {
-						getjsondata = VMM.getJSON(url, function(d) {
+						getjsondata = jQuery.ajax({
+						  url: url,
+						  cache: false, // this is because apps removes the random token
+						  dataType: 'jsonp',
+                          jsonpCallback: 'timelineJSCallback',
+						  success: function(d) {
 							clearTimeout(timeout);
 							VMM.Timeline.DataObj.model.googlespreadsheet.buildData(d);
+				          }
 						})
 							.error(function(jqXHR, textStatus, errorThrown) {
 								trace("Google Docs ERROR");
@@ -9316,7 +9326,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 				buildData: function(d) {
 					var data_obj	= VMM.Timeline.DataObj.data_template_obj,
 						is_valid	= false;
-					
+						
 					VMM.fireEvent(global, VMM.Timeline.Config.events.messege, "Parsing Google Doc Data");
 					
 					function getGVar(v) {
@@ -9395,7 +9405,8 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					var getjsondata, key, url, timeout, tries = 0;
 					
 					key	= VMM.Util.getUrlVars(raw)["key"];
-					url	= "https://spreadsheets.google.com/feeds/cells/" + key + "/od6/public/values?alt=json";
+					url	= "https://spreadsheets.google.com/feeds/cells/" + key + "/od6/public/values?alt=json-in-script";
+					if (!!this.cached) url = 'http://apps.washingtonpost.com/national/proxy/google/spreadsheet/' + key + '/od6/?alt=json-in-script';
 					
 					timeout = setTimeout(function() {
 						trace("Google Docs timeout " + url);
@@ -9411,9 +9422,16 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					}, 16000);
 					
 					function requestJsonData() {
-						getjsondata = VMM.getJSON(url, function(d) {
+						getjsondata = jQuery.ajax({
+						  url: url,
+						  cache: false, // this is because apps removes the random token
+						  dataType: 'jsonp',
+                          jsonpCallback: 'timelineJSCellsCallback',
+						  success: function(d) {
+						      console.log(d);
 							clearTimeout(timeout);
 							VMM.Timeline.DataObj.model.googlespreadsheet.buildDataCells(d);
+				          }
 						})
 							.error(function(jqXHR, textStatus, errorThrown) {
 								trace("Google Docs ERROR");
@@ -9452,7 +9470,7 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 						// DETERMINE NUMBER OF ROWS
 						for(i = 0; i < d.feed.entry.length; i++) {
 							var dd				= d.feed.entry[i];
-							
+
 							if (parseInt(dd.gs$cell.row) > max_row) {
 								max_row = parseInt(dd.gs$cell.row);
 							}
