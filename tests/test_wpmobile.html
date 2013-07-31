@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!-- MOBILE/DESKTOP REDIRECT CODE: CHECK LOCATION.HREF -->
+    <!--
+    <script>
+        if (document.location.href.indexOf('template=mobile') === -1) {
+            if (navigator.cookieEnabled & document.cookie.indexOf("byeDavid")<0 && (navigator.platform.substring(0,3)=="Mac" || navigator.platform.substring(0,3)=="Win")){
+                    var d = new Date();
+                    d.setTime(d.getTime()+(7*43200000));
+                    document.cookie= "sd=s; expires="+d.toGMTString() +"; domain=.washingtonpost.com; path=/";
+                    location.href="../";
+                }
+            }
+    </script> -->
+    <title>TITLE - Washington Post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="twitter:title"          content="TITLE" />
+    <meta property="og:title"           content="TITLE" />
+    <meta name="description"            content="DESCRIPTION" />
+    <meta property="og:description"     content="DESCRIPTION"/>
+    <meta name="twitter:description"    content="DESCRIPTION">
+    <meta name="keywords"               content="KEYWORDS" />
+    <link rel="canonical"               href="PAGE_URL" />
+    <meta property="og:url"             content="PAGE_URL"/>
+    <meta name="twitter:url"            content="PAGE_URL" />
+    <link rel="shorturl"                href="PAGE_SHORTURL" />
+    <meta property="og:image"           content="IMAGE_URL" />
+    <meta name="twitter:image"          content="IMAGE_URL" />
+
+    <meta name="twitter:site"           content="@postgraphics" />
+    <meta property="article:publisher"  content="https://www.facebook.com/washingtonpost" />
+    <meta property="article:author"     content="https://www.facebook.com/postgraphics" />
+    <!--<meta name="twitter:creator"    content="@username" />-->
+    <meta name="twitter:card"           content="summary_large_image" />
+    <meta property="fb:app_id"          content="41245586762" />
+    <meta property="og:site_name"       content="Washington Post" />
+    <meta property="fb:admins"          content="1244584375" />
+    <meta property="fb:admins"          content="4403963" />
+    <meta property="fb:admins"          content="2724956" />
+    <meta property="fb:admins"          content="500835072" />
+    <meta property="fb:admins"          content="1513210492" />
+
+    <!-- FILL OUT THISNODE WITH SECTION HERE -->
+    <script type="text/javascript" charset="utf-8">
+        var thisNode = 'local',
+            thisPageName = document.location.pathname.replace('/wp-srv/special/', '');
+            TWP = window.TWP || {};
+    </script>
+
+    <!-- Le styles -->
+    <!-- You will need to fix up your include paths due to subdirectory of project -->
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/wpbootstrap.min.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/wpbootstrap-responsive.min.css" rel="stylesheet">
+    <!--
+        Foundation Zurb Text Icons Fonts: http://www.zurb.com/playground/foundation-icons
+        Example usage:
+        <i class="general foundicon-settings"></i> (Produces settings cog icon as a font)
+    -->
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/general_enclosed_foundicons.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/general_foundicons.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/social_foundicons.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/accessibility_foundicons.css" rel="stylesheet">
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/accessibility_foundicons_ie7.css">
+        <link rel="stylesheet" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/general_enclosed_foundicons_ie7.css">
+        <link rel="stylesheet" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/general_foundicons_ie7.css">
+        <link rel="stylesheet" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/assets/fonts/foundation-icons/css/social_foundicons_ie7.css">
+    <![endif]-->
+    <!-- End Foundation Icon Fonts -->
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/colors.min.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/fonts.min.css" rel="stylesheet">
+    <!--[if IE]>
+        <link rel="stylesheet" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/iefonts.css" type="text/css" charset="utf-8" />
+    <![endif]-->
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/inline.min.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/wp.min.css" rel="stylesheet">
+    <link href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/css/wp-responsive.min.css" rel="stylesheet">
+    <link href="http://css.wpdigital.net/wp-srv/graphics/css/mobile-base.css" rel="stylesheet">
+    <!-- INCLUDE YOUR OWN CSS FILE HERE -->
+    <!--link href="mycss.css" rel="stylesheet"-->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://www.washingtonpost.com/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- ADVERTISING CODE WITH MOBILE DETECTION -->
+    <script type="text/javascript">
+        // Mobile detection
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i) ? true : false;
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+            },
+            iPad: function() {
+                return navigator.userAgent.match(/iPad/i) ? true : false;
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i) ? true : false;
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+            }
+        };
+        // Mobile global var
+        var mobile_browser;
+        mobile_browser = 0;
+        if( isMobile.any() ) mobile_browser = 1;
+        // Special check for iOS for video
+        var ios_browser;
+        ios_browser = 0;
+        if( isMobile.iOS() ) ios_browser = 1;
+        // Another check for special iPad styles
+        var ipad_browser;
+        ipad_browser = 0;
+        if( isMobile.iPad() ) ipad_browser = 1;
+
+        // checking for mobile iframe
+        var has_iframe = window.location.href.indexOf('iframe') === -1 ? 0 : 1;
+
+        // IMPORTANT
+        // SET THE COMMERCIAL NODE
+        var commercialNode = thisNode;
+        // END COMMERCIAL NODE
+
+
+        // Conditional JS load for mobile
+        function loadRemoteScript(url, callback)
+        {
+            // adding the script tag to the head as suggested before
+           var head = document.getElementsByTagName('head')[0];
+           var script = document.createElement('script');
+           script.type = 'text/javascript';
+           script.src = url;
+           script.onload = callback;
+
+           // fire the loading
+           head.appendChild(script);
+        }
+
+        function scriptCallBack(){
+            // null callback
+        }
+
+        // then add the script/s...
+        if(mobile_browser > 0 && ipad_browser == 0) {
+            loadRemoteScript('http://js.washingtonpost.com/wp-srv/ad/mobile.js',scriptCallBack);
+        }
+    </script>
+    <!-- Core AD code includes -->
+    <script type="text/javascript" src="http://js.washingtonpost.com/wp-srv/ad/generic_ad.js"></script>
+    <script type="text/javascript" src="http://js.washingtonpost.com/wp-srv/ad/wp.js"></script>
+    <script src="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/js/jquery-min.js"></script>
+    <!-- Main Bootstrap Functionality, Controls Menu -->
+    <script src="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/js/bootstrap.min.js"></script>
+    <!-- Main Controls JS -->
+    <script src="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/js/wpcontrols.min.js"></script>
+    <script type="text/javascript" src="http://js.washingtonpost.com/wp-srv/graphics/js/twp.util.js"></script>
+    <script type="text/javascript" src="http://js.washingtonpost.com/wp-srv/graphics/js/mobile-base.js?130717"></script>
+</head>
+
+<body>
+    <script>if (document.location.href.indexOf('template=iframe') !== -1) { document.body.style.display = 'none'; thisPageName += ' - iframe'; }</script>
+    <!-- GLOBAL RESPONSIVE HEADER -->
+    <div id="nav">
+        <a class="branding" href="//www.washingtonpost.com">
+            <div class="hidden-phone">
+                <img class="" src="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/img/thewashingtonpost.png" alt="The Washington Post"/>
+            </div>
+            <div class="visible-phone">
+                <img class="" src="http://www.washingtonpost.com/grid/wp-content/themes/wapo-grid-theme/img/wp_white_60.png" alt="The Washington Post"/>
+            </div>
+        </a>
+<!--         <p class="title">
+            <a href="#main-container">A swing of beauty</a>
+        </p> -->
+        <ul class="sections nav">
+            <li class="share">
+                <a href="#">
+                    <span class="text">Share</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li id="dd-share-em"><a href="" title="Email" target="_blank"><i class="icon-envelope-alt mr5"></i> Email</a></li>
+                    <li class="divider show-for-medium-and-up"></li>
+                    <li id="dd-share-fb"><a href="" target="_blank"><i class="icon-facebook mr5"></i> Facebook</a></li>
+                    <li class="divider show-for-medium-and-up"></li>
+                    <li id="dd-share-tw"><a href="" target="_blank"><i class="icon-twitter mr5"></i> Tweet</a></li>
+                </ul>
+            </li>
+            <!-- <li class="comment visible-desktop">
+                <a href="#comments">
+                    <span class="icon">
+                        <img src="http://www.washingtonpost.com/wp-srv/special/sports/cycling/images/comment-icon.png">
+                    </span>
+                    <span class="text">Comment</span>
+                </a>
+            </li> -->
+        </ul>
+        <div class="clear"></div>
+    </div>
+
+    <!-- END GLOBAL RESPONSIVE NAV -->
+
+    <!-- SWAP OUT HEADER HTML HERE: header-main or header-section -->
+    <!-- MAIN Logo Container for Header -->
+    <div id="mobile-header" class="visible-phone mb0">
+        <div class="navbar navbarlogo">
+            <div class="pagination-centered">
+                <a href="http://washingtonpost.com" title="The Washington Post"><img src="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/img/thewashingtonpost-black.png" class="wplogo xlarge" alt="The Washington Post"></a>
+            </div>
+        </div>
+    </div>
+    <!-- End MAIN Header Logo Container -->
+    <!-- // END SWAP OUT HEADER HTML HERE: header-main or header-section -->
+
+    <!-- SECTION Logo Container for Header (remove "hidden" and add "visible-phone" class to show and hide toplogo) -->
+    <div id="mobile-header" class="hidden">
+        <div class="navbar tight navbarlogo navsection">
+            <div class="pagination-centered">
+                <!-- Replace this link with section direct link or leave as home -->
+                <a href="http://m.washingtonpost.com" title="The Washington Post">
+                    <img src="http://www.washingtonpost.com/wp-srv/graphics/templates/mobile/img/thewashingtonpost-black.png" class="wplogo tiny" alt="The Washington Post">
+                    <!-- REPLACE with Section name -->
+                    <h1 id="pagetitle" class="wptitle blacktxt">Section</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- END SECTION Logo Container for Header -->
+
+    <!-- BEGIN ADS -->
+    <!-- Leader Board Ad Container -->
+    <div id="leaderboardad" class="container-fluid pt15 pr20 pb0 pl20 hidden-phone">
+      <div class="adcontainer">
+          <small class="ad-label">AD</small>
+          <div class="leaderboard">
+              <!--LEADERBOARD AD BEGIN-->
+              <div id="slug_leaderboard" style="display:none;">
+                        <script type="text/javascript">
+                            if(mobile_browser == 0 || ipad_browser == 1 || has_iframe == 1){
+                            placeAd2(commercialNode,"leaderboard",false,'');
+                            }
+                        </script>
+              </div>
+              <!--LEADERBOARD AD END-->
+          </div>
+          <hr>
+      </div>
+    </div>
+
+    <!-- Mobile Ad Container -->
+    <div id="mobilead" class="mobilecontainer visible-phone">
+      <div class="mobilebanner">
+          <!--T AD BEGIN-->
+          <!-- REPLACE THIS WITH YOUR AD TAG OR REMOVE WHOLE BLOCK -->
+            <div id="slug_t" style="display:none;">
+            <script type="text/javascript">
+                if(mobile_browser > 0 && ipad_browser == 0 || has_iframe == 1){
+                    placeAd2(commercialNode, 't', false, '');
+                }
+            </script>
+          </div>
+          <!--T AD END-->
+      </div>
+    </div>
+    <!-- END ADS -->
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- !!!!!!!!!! MAIN CONTENT STARTS HERE !!!!!!!!!! -->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    <div id="main-container" class="container">
+        <h1>The Alchemists Timeline</h1>
+            <p class="body">This timeline follows the inside story of five years of crisis with the world's leading central bankers. Read Post columnist <a href="http://www.washingtonpost.com/neil-irwin/2011/03/04/ABSudxN_page.html">Neil Irwin's</a> book <i>The Alchemists</i> for the full story on the global financial crisis and its aftermath. <a href="http://www.washingtonpost.com/business/three-days-that-saved-the-world-financial-system/2013/03/28/d5b9a38c-94ef-11e2-b6f0-a5150a247b6a_story.html">Read related story.</a></p>
+
+             <style>
+                  #timeline-wrap {
+                      margin:0 -11px;
+                      width:1012px;
+                      height:600px;
+                      border:1px solid #e8e8e8;
+                  }
+                  #timeline-wrap .vco-slider .slider-item .content .content-container .media {
+                      width: 25% !important;
+                  }
+                  #timeline-wrap .vco-slider .slider-item .content .content-container .text {
+                      width: 70% !important;
+                  }
+                  #timeline-wrap .vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .media-frame,
+                  #timeline-wrap .vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .media-image img {
+                      border: 0 none;
+                      background: none;
+                  }
+                  #timeline-wrap .vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .credit {
+                      text-align: left;
+                  }
+
+                  @media screen and (max-width: 480px) {
+                    #timeline-wrap {
+                        margin: 0;
+                        width: 100%;
+                        height: 557px;
+                        border: 1px solid #e8e8e8;
+                    }
+
+                    .storyjs-embed.full-embed {
+                        height: 557px !important;
+                        width: 100% !important;
+                    }
+
+                    .vco-skinny .vco-slider .slider-item .content .layout-text-media h3 {
+                        -webkit-hyphens:none;
+                        -moz-hyphens:none;
+                        -ms-hyphens:none;
+                        hyphens:none;
+                        word-wrap:break-word;
+                    }
+
+                    #timeline-wrap .vco-slider .slider-item .content .content-container .media {
+                        width: 100% !important;
+                    }
+
+                    #timeline-wrap .vco-slider .slider-item .content .content-container .text {
+                        width: 100% !important;
+                    }
+                  }
+                </style>
+                <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+              <!-- BEGIN Timeline Embed -->
+              <div id="timeline-wrap">
+                  <div id="timeline-embed"></div>
+              </div>
+              <script type="text/javascript">
+                var timeline_config = {
+                 width: "100%",
+                 height: "100%",
+                 js: '../compiled/js/timeline.js',
+                 css: '../compiled/css/timeline-washingtonpost.css',
+                 cached: true,
+                 source: 'https://docs.google.com/spreadsheet/pub?key=0Av8C0Ij_4uhndERjd0dabFNiTV9KZjB4REhmWGhRTVE&output=html'
+                }
+              </script>
+              <script type="text/javascript" src="http://www.washingtonpost.com/wp-srv/graphics/timelinejs/js/storyjs-embed.js"></script>
+              <!-- END Timeline Embed-->
+
+    </div>
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- !!!!!!!!!!! MAIN CONTENT ENDS HERE !!!!!!!!!!! -->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    <!-- Related content module, comment out if not using -->
+    <div class="more-articles">
+        <div class="heading">More coverage</div>
+        <div id="relatedHeadlines"></div>
+        <!-- Or create your own, using a div "article" for each item -->
+        <!--<div class="article">
+            <a href="http://www.washingtonpost.com/politics/scores-killed-when-huge-tornado-levels-oklahoma-city-suburb/2013/05/21/b00ecada-c1ff-11e2-8c3b-0b5e9247e8ca_story.html"><p class="headline">Dozens killed when huge tornado levels Oklahoma City suburb</p></a>
+        </div> -->
+    </div>
+
+    <!-- GLOBAL WP MOBILE FOOTER -->
+    <div class="wpfooter visible-phone">
+        <div class="pagination-centered">
+            <p><small>&copy; Copyright 1996-2013 The Washington Post</small></p>
+            <!-- <p><strong><a href="#" class="fullSiteLink" title="View desktop site">View desktop site</a></strong></p> -->
+        </div>
+    </div>
+    <!-- END GLOBAL WP MOBILE FOOTER -->
+
+    <!-- Requires jQuery, Remove if already included -->
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            try {
+                jQuery.queryToUL({
+                container:'#relatedHeadlines',
+                //query: 'http://apps.washingtonpost.com/national/proxy/methode/sitesearch/?fq=primarysection:Politics%20source:%22The%20Washington%20Post%22&q=moore%20tornado&start=0&rows=3&fl=contenturl,headline,byline,blurb,contenttype&wt=json&omitHeader=true&json.wrf=storyCallback&tracking=relatedcontent',
+                callback: 'storyCallback',
+                items: 5 // optional, default is 5
+                });
+            } catch (e) {}
+        });
+    </script>
+
+    <!-- BEGIN OMNITURE -->
+    <script type="text/javascript">
+        var s_account="wpniwpmobileprod";
+    </script>
+    <script language="JavaScript" type="text/javascript" src=" http://m.washingtonpost.com/scripts/s_code.js?v=8"></script>
+    <script type="text/javascript" src="http://m.washingtonpost.com/scripts/mobile-omniture.js?v=8"></script>
+    <noscript><img src="http://wpni.112.2o7.net/b/ss/wpniwpmobilepp/1/H.24.4--NS/0"
+    height="1" width="1" border="0" alt="" /></noscript>
+    <script type="text/javascript">
+        s.pageName = thisNode + ":graphic – " + thisPageName;
+        s.channel = "wpm – " + thisNode;
+        s.prop2 = "wpm – " + thisNode;
+        s.prop3 = "graphic";
+        s.prop11 = TWP.omniture.getconnectiontype().toLowerCase();
+        s.prop12 = navigator.userAgent.toLowerCase();
+        s.eVar1 = thisNode + ":graphic – " + thisPageName;
+        s.eVar2 = "wpm – " + thisNode;
+        s.eVar5 = "graphic";
+        s.eVar19 = navigator.userAgent.toLowerCase();
+        s.events = "event1";
+
+        var s_code=s.t();if(s_code)document.write(s_code)
+    </script>
+    <script language="JavaScript" type="text/javascript"><!--
+    if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+    //--></script>
+        <noscript><img src="http://wpni.112.2o7.net/b/ss/wpniwpmobileprod/1/H.25.3--NS/0"
+    height="1" width="1" border="0" alt="" /></noscript>
+    <!-- END OMNITURE -->
+
+</body>
+</html>

@@ -5495,7 +5495,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 
 
 			if (is_skinny) {
-				console.log('Content width: ', config.slider.content.width);
+				// console.log('Content width: ', config.slider.content.width);
 				mediasize.text_media.width = 	config.slider.content.width;
 				mediasize.media.width = 		config.slider.content.width;
 				mediasize.text_media.height = 	((config.slider.height/100) * 50 ) - 50;
