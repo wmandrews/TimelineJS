@@ -879,6 +879,7 @@
 	background:#fff;
 }
 
+/*
 .vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .media-shadow:before,.vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .media-shadow:after {
 	z-index:-1;
 	position:absolute;
@@ -908,6 +909,7 @@
 	right:10px;
 	left:auto;
 }
+*/
 
 .vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .plain-text {
 	display:table;
